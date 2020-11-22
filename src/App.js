@@ -6,13 +6,6 @@ import { Map } from './pages/Map';
 import { Profile } from './pages/Profile';
 import './App.css';
 
-// const PAGES = {
-//   login: <Login />,
-//   registration: <Registration />,
-//   map: <Map />,
-//   profile: <Profile />
-// };
-
 class App extends React.Component {
   state = { currentPage: "login" };
 
@@ -25,35 +18,8 @@ class App extends React.Component {
     return (
       <div className="wrapper">
         <div className="container">
-          {/* <header>
-            <nav>
-              <ul>
-                <li>
-                  <button onClick={() => this.changePage("login")}>
-                    login
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => this.changePage("registration")}>
-                    registration
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => this.changePage("map")}>
-                    map
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => this.changePage("profile")}>
-                    profile
-                  </button>
-                </li>
-              </ul>
-            </nav>
-          </header> */}
           <main>
             <section>
-              {/* { PAGES[this.state.currentPage] } */}
               { this.state.currentPage === 'map' && <Map changePage={this.changePage} /> }
               { this.state.currentPage === 'profile' && <Profile changePage={this.changePage} /> }
               { this.state.currentPage === 'login' && <Login changePage={this.changePage} /> }
