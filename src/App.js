@@ -1,8 +1,8 @@
 import React from 'react';
-import { Login } from './Login';
-import { Registration } from './Registration';
-import { Map } from './Map';
-import { Profile } from './Profile';
+import { Login } from './pages/Login';
+import { Registration } from './pages/Registration';
+import { Map } from './pages/Map';
+import { Profile } from './pages/Profile';
 import './App.css';
 
 const PAGES = {

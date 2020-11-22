@@ -1,14 +1,10 @@
 import React from 'react';
-import Mark from './img/mark.png';
-import Logo from './img/logo.png';
+import { Logo } from '../components/Logo';
 
 export const Login = () => {
   return  (
     <>
-      <div>
-        <img src={Mark} alt="loft taxi mark"/>
-        <img src={Logo} alt="loft taxi logo"/>
-      </div>
+      <Logo />
       <form>
         <h1>Войти</h1>
         <div>Новый пользователь? <a href="#">Зарегистрируйтесь</a></div>
