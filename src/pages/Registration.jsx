@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { Logo } from '../components/Logo';
 
@@ -7,7 +8,7 @@ export const Registration = ({ changePage }) => {
       <Logo />
       <form>
         <h1>Регистрация</h1>
-        <div>Уже зарегистрирован?<a href="#">Войти</a></div>
+        <div>Уже зарегистрирован?<a href="/login/" onClick={(e) => changePage(e, 'login')}>Войти</a></div>
         <div>
           <label htmlFor="email">Адрес электронной почты</label>
           <input id="email" type="email" name="email" size="28" placeholder="mail@mail.ru"/>
@@ -22,7 +23,7 @@ export const Registration = ({ changePage }) => {
           <label htmlFor="password">Пароль</label>
           <input id="password" type="password" name="password" size="28"/>
         </div>
-        <a href="/card/" onClick={(e) => changePage(e, 'card')}>Зарегистрироваться</a>
+        <a href="/map/" onClick={(e) => changePage(e, 'map')}>Зарегистрироваться</a>
       </form>
     </>
   );
