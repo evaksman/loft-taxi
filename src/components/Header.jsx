@@ -2,11 +2,11 @@ import React from 'react';
 import { Logo } from '../components/Logo';
 import { Navbar } from '../components/Navbar';
 
-export const Header = () => {
+export const Header = ({changePage}) => {
   return (
     <header className="header">
       <Logo />
-      <Navbar />
+      <Navbar change={changePage} />
     </header>
   );
 };

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Header } from '../components/Header'; 
 
-export const Profile = () => {
+export const Profile = ({ changePage }) => {
   return (
     <>
-      <Header />
+      <Header change={changePage} />
     </>
   );
 };

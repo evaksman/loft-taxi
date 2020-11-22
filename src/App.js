@@ -15,45 +15,50 @@ const PAGES = {
 class App extends React.Component {
   state = { currentPage: "login" };
 
-  navigateTo = (page) => {
+  changePage = (e, page) => {
+    e.preventDefault();
     this.setState({ currentPage: page });
   }
 
   render() {
     return (
-      <>
-        <header>
+      <div className="wrapper">
+        {/* <header>
           <nav>
             <ul>
               <li>
-                <button onClick={() => this.navigateTo("login")}>
+                <button onClick={() => this.changePage("login")}>
                   login
                 </button>
               </li>
               <li>
-                <button onClick={() => this.navigateTo("registration")}>
+                <button onClick={() => this.changePage("registration")}>
                   registration
                 </button>
               </li>
               <li>
-                <button onClick={() => this.navigateTo("map")}>
+                <button onClick={() => this.changePage("map")}>
                   map
                 </button>
               </li>
               <li>
-                <button onClick={() => this.navigateTo("profile")}>
+                <button onClick={() => this.changePage("profile")}>
                   profile
                 </button>
               </li>
             </ul>
           </nav>
-        </header>
+        </header> */}
         <main>
           <section>
-            { PAGES[this.state.currentPage] }
+            {/* { PAGES[this.state.currentPage] } */}
+            { this.state.currentPage === 'map' && <Map changePage={this.changePage} /> }
+            { this.state.currentPage === 'profile' && <Profile changePage={this.changePage} /> }
+            { this.state.currentPage === 'login' && <Login changePage={this.changePage} /> }
+            { this.state.currentPage === 'registration' && <Registration changePage={this.changePage} /> }
           </section>
         </main>
-      </>
+      </div>
     );
   }
 }

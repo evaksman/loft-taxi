@@ -1,7 +1,7 @@
 import React from 'react';
 import { Logo } from '../components/Logo';
 
-export const Registration = () => {
+export const Registration = ({ changePage }) => {
   return (
     <>
       <Logo />
@@ -22,7 +22,7 @@ export const Registration = () => {
           <label htmlFor="password">Пароль</label>
           <input id="password" type="password" name="password" size="28"/>
         </div>
-        <button type="submit">Зарегистрироваться</button>
+        <a href="/card/" onClick={(e) => changePage(e, 'card')}>Зарегистрироваться</a>
       </form>
     </>
   );

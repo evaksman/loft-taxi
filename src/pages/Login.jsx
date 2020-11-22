@@ -1,7 +1,11 @@
 import React from 'react';
 import { Logo } from '../components/Logo';
 
-export const Login = () => {
+// btnClick = (e) => {
+//   this.setState();
+// };
+
+export const Login = ({ changePage }) => {
   return  (
     <>
       <Logo />
@@ -16,7 +20,7 @@ export const Login = () => {
           <label htmlFor="password">Пароль*</label>
           <input id="password" type="password" name="password" size="28"/>
         </div>
-        <button type="submit">Войти</button>
+        <a href="/card/" onClick={(e) => changePage(e, 'card')}>Войти</a>
       </form>
     </>
   );

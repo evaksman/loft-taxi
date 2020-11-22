@@ -1,11 +1,11 @@
 import React from 'react';
 
-export const Navbar = () => {
+export const Navbar = ({ changePage }) => {
   return (
     <nav>
-      <a href="#">Карта</a>
-      <a href="#">Профиль</a>
-      <a href="#">Выйти</a>
+      <a href="/card/" onClick={(e) => changePage(e, 'card')}>Карта</a>
+      <a href="/profile" onClick={(e) => changePage(e, 'profile')}>Профиль</a>
+      <a href="/login/" onClick={(e) => changePage(e, 'login')}>Выйти</a>
     </nav>
   );
 };
