@@ -1,12 +1,12 @@
 /* eslint-disable */
 import React from 'react';
-import { Header } from '../components/Header'; 
+import Header  from '../components/Header'; 
 
-export const Map = ({ changePage }) => {
-  return (
-    <>
-      <h1>Карта</h1>
-      <Header change={changePage} />
-    </>
-  );
-};
+const Map = ({ changePage }) => (
+  <>
+    <h1>Карта</h1>
+    <Header change={changePage} />
+  </>
+);
+
+export default Map;
