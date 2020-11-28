@@ -1,7 +1,8 @@
 /* eslint-disable */
 
 import React from 'react';
-import Logo from '../components/Logo';
+// import Logo from '../components/Logo';
+import { Logo } from 'loft-taxi-mui-theme';
 
 const Login = ({ changePage }) => (
   <>

@@ -4,9 +4,14 @@ import Login from './pages/Login';
 import Registration from './pages/Registration';
 import Map from './pages/Map';
 import Profile from './pages/Profile';
+import PropTypes from "prop-types";
 import './App.css';
 
 class App extends React.Component {
+  static propTypes = {
+    currentPage: PropTypes.string
+  }
+
   state = { currentPage: "login" };
 
   changePage = (e, page) => {
